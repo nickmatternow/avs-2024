@@ -25,6 +25,11 @@ function gdt_scripts_and_styles() {
     $js_file_time = filemtime(get_stylesheet_directory() . '/dist/site.bundle.js');
     wp_register_script('gutendev-bundle', get_stylesheet_directory_uri() . '/dist/site.bundle.js', array('jquery'), $js_file_time, true);
   
+
+  
+      $js_file_time = filemtime(get_stylesheet_directory() . '/dist/swiper-bundle.min.js');
+      wp_register_script('swiper', get_stylesheet_directory_uri() . '/dist/swiper-bundle.min.js', $js_file_time, true);
+    
      // Print Styles.
      $css_file_time = filemtime(get_stylesheet_directory() . '/dist/print.css');
      wp_register_style( 'gutendev-print', get_stylesheet_directory_uri() . '/dist/print.css', array(), $css_file_time, 'print' );

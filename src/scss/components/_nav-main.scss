@@ -50,17 +50,7 @@
     &:last-of-type > a {
       padding-right: 0;
     }
-    &::after {
-      position: absolute;
-      content: "";
-      display: block;
-      width: calc(100% - 32px);
-      height: 4px;
-      background-color: #fff;
-      border-radius: 20px;
-      top: 25px;
-      transition: $transition-ease;
-    }
+   
     
   }
   .c-main-menu > li > a:hover {
@@ -72,10 +62,6 @@
   }
   .c-main-menu > li:hover a{
    
-    &::after {
-      background-color: $color-primary;
-      transition: $transition-ease;
-    }
   }
   .c-main-menu > .current-menu-item > a,
   .c-main-menu > .current-page-ancestor > a,
@@ -84,6 +70,24 @@
   .c-main-menu > .current_page_ancestor > a {
     color: #222222
   }
+
+  // dark Mode top level
+  .is-dark-page {
+    .c-main-menu > li > a {
+      color: #fff;
+    }
+    .c-main-menu > li > a:hover {
+      color: #fff;
+    }
+    .c-main-menu > .current-menu-item > a,
+    .c-main-menu > .current-page-ancestor > a,
+    .c-main-menu > .current_page_item > a,
+    .c-main-menu > .current_page_parent > a,
+    .c-main-menu > .current_page_ancestor > a {
+      color: #fff;
+    }
+  }
+   // dark Mode
 }
 // END menu top level
 

@@ -2,23 +2,23 @@
 
     <div class="c-page-footer-upper">
       <div class="o-wrapper-wide">
-      <div class="grid-x">
-          <div class="cell  medium-3">
+      <div class="c-footer-columns">
+          <div class="c-footer-column">
             <?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
               <?php dynamic_sidebar( 'footer-1' ); ?>
             <?php endif; ?>
           </div>
-          <div class="cell  medium-3">
+          <div class="c-footer-column">
           <?php if ( is_active_sidebar( 'footer-2' ) ) : ?>
             <?php dynamic_sidebar( 'footer-2' ); ?>
           <?php endif; ?>
           </div>
-          <div class="cell  medium-3">
+          <div class="c-footer-column">
           <?php if ( is_active_sidebar( 'footer-3' ) ) : ?>
             <?php dynamic_sidebar( 'footer-3' ); ?>
           <?php endif; ?>
           </div>
-          <div class="cell  medium-3">
+          <div class="c-footer-column">
           <?php if ( is_active_sidebar( 'footer-4' ) ) : ?>
             <?php dynamic_sidebar( 'footer-4' ); ?>
           <?php endif; ?>
@@ -31,10 +31,11 @@
       <!-- /.o-wrapper-wide -->
     </div>
     <div class="c-page-footer-lower">
-      <div class="o-wrapper-wide">
+      <div class="o-wrapper-wider">
         <div class="">
+          <p>CAUTION: The PULSE IVL™ System is in development. It is not yet cleared for commercial distribution in any country. Its future availability cannot be guaranteed.</p>
             <div class="c-copywrite">
-              &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.
+            Copyright &copy; <?php echo date('Y'); ?>. <?php bloginfo('name'); ?>. All rights reserved. <a href="/privacy-policy">Privacy Policy</a>
             </div>
         </div>
       </div>

@@ -11,34 +11,29 @@
 			"custom": false,
 			"palette": [
 				{
-                    "name": "Black",
-					"slug": "black",
-					"color": "#000000"
+                    "name": "Midnight Black - #1C1C1B",
+					"slug": "avs-black",
+					"color": "#1C1C1B"
 				},
 				{
-					"slug": "white",
+					"slug": "avs-white",
 					"color": "#FFFFFF",
-					"name": "White"
+					"name": "Pure White - #FFFFFF"
 				},
                 {
 					"slug": "dark-grey",
-					"color": "#121212",
-					"name": "Dark grey"
+					"color": "#2F2F2F",
+					"name": "Pale Black - #2F2F2F"
 				},
 				{
 					"slug": "medium-grey",
-					"color": "#383838",
-					"name": "Medium grey"
+					"color": "#2F2F2F",
+					"name": "Onxy grey - #2F2F2F"
 				},
 				{
 					"slug": "primary",
-					"color": "#00838f",
-					"name": "Primary"
-				},
-				{
-					"slug": "secondary",
-					"color": "#4fb3bf",
-					"name": "Secondary" 
+					"color": "#FF5B00",
+					"name": "Pulse Orange - #FF5B00"
 				},
 				{
 					"slug": "transparent",

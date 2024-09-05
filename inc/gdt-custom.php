@@ -9,6 +9,10 @@
 //   function acf_icon_path_suffix( $path_suffix ) {
 //       return 'img/icons/';
 //   }
+
+add_filter('blockstudio/settings/users/roles', function() {
+  return ["administrator","editor"];
+});
   
 //used for Stackable blocks support - match to wrapper width 
 global $content_width;

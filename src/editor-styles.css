@@ -5,6 +5,21 @@
 /* ==========================================================================
    VARIABLES
    ========================================================================== */
+.arimo-400 {
+  font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cairo-400 {
+  font-family: "Cairo", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
 /* ==========================================================================
    WRAPPERS
    ========================================================================== */
@@ -22,11 +37,82 @@
   width: 100%;
 }
 
+.o-wrapper-wider {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1222px;
+  width: 100%;
+}
+
 .o-wrapper-narrow {
   margin-left: auto;
   margin-right: auto;
   max-width: 760px;
   width: 100%;
+}
+
+.is-style-grad-bg-one {
+  position: relative; /* Ensure the pseudo-element is positioned relative to this element */
+}
+.is-style-grad-bg-one::before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 45%;
+  width: 136px; /* Set the width of the gradient */
+  height: 136px; /* Set the height of the gradient */
+  background: radial-gradient(circle, rgba(251, 130, 39, 0.2) 0%, transparent 100%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); /* Center the gradient vertically */
+  -webkit-filter: blur(100px);
+          filter: blur(100px);
+}
+.is-style-grad-bg-one::after {
+  content: "";
+  position: absolute;
+  right: -220px;
+  top: 55%;
+  width: 336px; /* Set the width of the gradient */
+  height: 336px; /* Set the height of the gradient */
+  background: radial-gradient(circle, rgba(251, 130, 39, 0.25) 0%, transparent 100%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); /* Center the gradient vertically */
+  -webkit-filter: blur(100px);
+          filter: blur(100px);
+}
+
+.c-lower-cta-wrapper {
+  position: relative;
+}
+.c-lower-cta-wrapper::before {
+  content: "";
+  position: absolute;
+  left: 65%;
+  top: 45%;
+  width: 400px; /* Set the width of the gradient */
+  height: 400px; /* Set the height of the gradient */
+  background: radial-gradient(circle, rgba(255, 35, 35, 0.2) 0%, transparent 100%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); /* Center the gradient vertically */
+  -webkit-filter: blur(100px);
+          filter: blur(100px);
+}
+
+.c-carousel-wrapper {
+  position: relative;
+}
+.c-carousel-wrapper::before {
+  content: "";
+  position: absolute;
+  left: 60%;
+  top: 52%;
+  width: 214px; /* Set the width of the gradient */
+  height: 214px; /* Set the height of the gradient */
+  background: radial-gradient(circle, rgba(255, 35, 35, 0.5) 0%, transparent 100%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); /* Center the gradient vertically */
+  -webkit-filter: blur(100px);
+          filter: blur(100px);
 }
 
 /* ==========================================================================
@@ -3139,13 +3225,21 @@
    ========================================================================== */
 html {
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
-  color: #000;
-  font-family: "rubik", sans-serif;
+  overflow-x: hidden;
+  color: #1C1C1B;
+  font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   line-height: 1.5;
   -webkit-overflow-scrolling: touch;
+}
+body.is-dark-page {
+  background-color: #1C1C1B;
 }
 
 /* ==========================================================================
@@ -3156,7 +3250,7 @@ blockquote {
   padding: 1em 1.5em;
   margin: 30px 0;
   font-size: clamp(1.13rem, 0.6vw + 0.98rem, 1.5rem);
-  color: #323232;
+  color: #2F2F2F;
 }
 blockquote::before {
   content: "“";
@@ -3164,7 +3258,7 @@ blockquote::before {
   top: 0;
   left: 10px;
   z-index: -1;
-  color: #EAEAEA;
+  color: #eee;
   font-size: 190px;
   line-height: 1;
 }
@@ -3195,11 +3289,17 @@ blockquote::before {
    HEADINGS
    ========================================================================== */
 h1, .h1-style, h2, .h2-style, h3, .h3-style, h4, .h4-style, h5, .h5-style, h6, .h6-style {
-  color: #323232;
-  font-family: "rubik", serif;
-  font-weight: 400;
+  color: currentColor;
+  font-family: "Cairo", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
   line-height: 1.1;
-  margin: 0 0 1rem 0;
+  margin: 0 0 30px 0;
+}
+h1.is-style-u-display-heading, .h1-style.is-style-u-display-heading, h2.is-style-u-display-heading, .h2-style.is-style-u-display-heading, h3.is-style-u-display-heading, .h3-style.is-style-u-display-heading, h4.is-style-u-display-heading, .h4-style.is-style-u-display-heading, h5.is-style-u-display-heading, .h5-style.is-style-u-display-heading, h6.is-style-u-display-heading, .h6-style.is-style-u-display-heading {
+  font-size: clamp(2.81rem, 2.5vw + 2.19rem, 4.38rem);
 }
 
 h1 a, .h1-style a, h2 a, .h2-style a, h3 a, .h3-style a, h4 a, .h4-style a, h5 a, .h5-style a, h6 a, .h6-style a {
@@ -3207,27 +3307,27 @@ h1 a, .h1-style a, h2 a, .h2-style a, h3 a, .h3-style a, h4 a, .h4-style a, h5 a
 }
 
 h1, .h1-style {
-  font-size: clamp(2.81rem, 1.5vw + 2.44rem, 3.75rem);
+  font-size: clamp(2.5rem, 1vw + 2.25rem, 3.13rem);
 }
 
 h2, .h2-style {
-  font-size: clamp(1.88rem, 1vw + 1.63rem, 2.5rem);
+  font-size: clamp(2.25rem, 0.6vw + 2.1rem, 2.63rem);
 }
 
 h3, .h3-style {
-  font-size: clamp(1.75rem, 0.8vw + 1.55rem, 2.25rem);
+  font-size: clamp(2rem, 0.4vw + 1.9rem, 2.25rem);
 }
 
 h4, .h4-style {
-  font-size: clamp(1.38rem, 0.8vw + 1.18rem, 1.88rem);
-}
-
-h5, .h5-style {
   font-size: clamp(1.25rem, 0.2vw + 1.2rem, 1.38rem);
 }
 
+h5, .h5-style {
+  font-size: clamp(1.06rem, 0vw + 1.06rem, 1.06rem);
+}
+
 h6, .h6-style {
-  font-size: clamp(1rem, 0.2vw + 0.95rem, 1.13rem);
+  font-size: clamp(1.06rem, 0vw + 1.06rem, 1.06rem);
 }
 
 /* ==========================================================================
@@ -3248,23 +3348,23 @@ hr, hr.wp-block-separator {
    FORM STYLES
    ========================================================================== */
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  color: #000;
+  color: #1C1C1B;
   opacity: 0.8;
 }
 input::-moz-placeholder, textarea::-moz-placeholder {
-  color: #000;
+  color: #1C1C1B;
   opacity: 0.8;
 }
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  color: #000;
+  color: #1C1C1B;
   opacity: 0.8;
 }
 input::-ms-input-placeholder, textarea::-ms-input-placeholder {
-  color: #000;
+  color: #1C1C1B;
   opacity: 0.8;
 }
 input::placeholder, textarea::placeholder {
-  color: #000;
+  color: #1C1C1B;
   opacity: 0.8;
 }
 
@@ -3337,7 +3437,7 @@ form input::placeholder {
    A TAG (links) STYLES
    ========================================================================== */
 a {
-  color: #460f5f;
+  color: #2F2F2F;
   text-decoration: none;
   cursor: pointer;
   -webkit-transition: all 250ms ease;
@@ -3345,7 +3445,7 @@ a {
 }
 
 a:hover {
-  color: #323232;
+  color: #2F2F2F;
 }
 
 a, a:active, a:hover, a:visited {
@@ -3363,6 +3463,7 @@ p {
   line-height: 1.5;
   margin: 0 0 1rem 0;
   padding: 0;
+  font-size: 18px;
 }
 
 /* ==========================================================================
@@ -3375,7 +3476,7 @@ p {
 }
 
 .c-blk-btn a, .c-btn-primary a, .wp-block-button.is-style-standard a.wp-block-button__link, .wp-block-button.is-style-standard .wp-block-button__link {
-  background-color: #ACACAC;
+  background-color: #2F2F2F;
   border: none;
   color: #FFF;
   display: inline-block;
@@ -3388,15 +3489,149 @@ p {
   white-space: nowrap;
 }
 .c-blk-btn a:hover, .c-btn-primary a:hover, .wp-block-button.is-style-standard a.wp-block-button__link:hover, .wp-block-button.is-style-standard .wp-block-button__link:hover {
-  background-color: #EAEAEA;
-  color: #000;
+  background-color: #eee;
+  color: #1C1C1B;
+}
+
+.gb-button:not(.gb-accordion__toggle):active, .gb-button:not(.gb-accordion__toggle):focus {
+  outline: 1px solid #fff;
+  outline-offset: 6px;
+}
+
+.c-more-link {
+  color: #fff;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+  font-family: "Cairo", serif;
+}
+.c-more-link svg {
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.c-more-link:hover {
+  color: #fff;
+}
+.c-more-link:hover svg {
+  margin-left: 5px;
+}
+
+.is-style-framedimg {
+  position: relative;
+  padding-bottom: 18px;
+}
+.is-style-framedimg img {
+  border-radius: 6.929px;
+  position: relative;
+  z-index: 2;
+  width: calc(100% - 18px);
+  height: calc(100% - 18px);
+}
+.is-style-framedimg::before {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: calc(100% - 18px);
+  height: calc(100% - 18px);
+  border-radius: 6.929px;
+  border: 1.4px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(117deg, #737372, #2f2f2e);
+  -webkit-backdrop-filter: blur(134px);
+          backdrop-filter: blur(134px);
+}
+
+.c-lower-cta {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: relative;
+  z-index: 2;
+}
+.c-lower-cta figure {
+  height: 100%;
+}
+
+.c-lower-cta > div:first-of-type {
+  margin-top: 24px !important;
+  margin-bottom: 24px !important;
+  position: relative;
+  border-radius: 7px 0 0 7px;
+  border-top: 1.4px solid rgba(147, 147, 146, 0.7882352941);
+  border-left: 1.4px solid rgba(147, 147, 146, 0.7882352941);
+  border-bottom: 1.4px solid rgba(147, 147, 146, 0.7882352941);
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(34.6467819214px);
+          backdrop-filter: blur(34.6467819214px);
+}
+.c-lower-cta > div:first-of-type::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+  background: radial-gradient(circle at top left, #645A51, transparent), radial-gradient(circle at bottom center, #333332, transparent), radial-gradient(circle at center right, #432C2B, transparent);
+}
+.c-lower-cta > div:first-of-type div {
+  position: relative;
+  z-index: 2;
+}
+.c-lower-cta > div:first-of-type > * {
+  position: relative;
+  z-index: 2;
+}
+
+.c-hero-steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: -70px;
+}
+.c-hero-steps div {
+  margin-right: 20px;
+  text-transform: uppercase;
+  font-family: "Cairo", serif;
+}
+.c-hero-steps span {
+  height: 1px;
+  background-color: #555555;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  top: -5px;
+  margin-right: 20px;
+  width: 30px;
+}
+.c-hero-steps span::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  top: -3px;
+  right: -10px;
 }
 
 /* ==========================================================================
    COLOURS
    ========================================================================== */
 .u-bg-grey {
-  background-color: #ACACAC;
+  background-color: #2F2F2F;
 }
 
 /* ==========================================================================
@@ -6295,7 +6530,7 @@ p {
 }
 
 .is-style-secondaryfont {
-  font-family: "rubik", serif;
+  font-family: "Cairo", serif;
 }
 
 .wp-block[data-align=full] .wp-block-group .wp-block {
@@ -6361,7 +6596,7 @@ p {
   margin-left: 20px;
 }
 
-.wp-block,
+.wp-block:not(.wp-block-generateblocks-container),
 .wp-block[data-type^=toolset]:not([data-align^=full]),
 div:not([class]) > .block-editor-block-list__layout > .wp-block:not([data-align^=full]),
 .tb-container > .block-editor-inner-blocks > .block-editor-block-list__layout > .wp-block:not([data-align^=full]) {

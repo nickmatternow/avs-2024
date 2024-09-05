@@ -18,7 +18,7 @@
 @import "./scss/elements/_html-body.scss";
 @import "./scss/elements/_blockquote.scss";
 @import "./scss/elements/_headings.scss";
-@import "./scss/elements/_hr.scss";
+@import "./scss/elements/_hr.scss"; 
 @import "./scss/elements/_form.scss";
 @import "./scss/elements/_links.scss";
 @import "./scss/elements/_paragraph.scss";
@@ -26,7 +26,8 @@
 
 // ++ COMPONENTS TO IMPORT +++++++++++++++++++++++++++++++++
 @import "./scss/components/_buttons.scss";
-
+@import "./scss/components/_small-blocks.scss";
+ 
 
 // ++ UTILITIES +++++++++++++++++++++++++++++++++
 @import "./scss/utilities/_colors.scss";
@@ -134,7 +135,7 @@ body .wp-block-column {
    }
   
 // // /* Width of "regular" blocks -- WHY DO I NEED THIS MESS TOOLSET!?!?! */
-.wp-block, 
+.wp-block:not(.wp-block-generateblocks-container), 
  .wp-block[data-type^="toolset"]:not([data-align^="full"]), 
  div:not([class]) > .block-editor-block-list__layout > .wp-block:not([data-align^="full"]), 
  .tb-container > .block-editor-inner-blocks > .block-editor-block-list__layout > .wp-block:not([data-align^="full"]) {

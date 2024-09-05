@@ -30,6 +30,29 @@ wp.blocks.registerBlockStyle(
   }
 );
 
+wp.blocks.registerBlockStyle(
+  'core/image',
+  {
+    name: 'framedimg',
+    label: 'Framed Image',
+    
+  }
+);
+
+wp.domReady(function() {
+  wp.blocks.registerBlockStyle('generateblocks/headline', {
+    name: 'display-heading',
+    label: 'Display Heading',
+  });
+});
+
+wp.domReady(function() {
+  wp.blocks.registerBlockStyle('generateblocks/container', {
+    name: 'grad-bg-one',
+    label: 'Gradient Background right',
+  });
+});
+
 
 // some blocks are required by WP when doing other things, so keep an eye on the consol log, currently cover block causes errors if we remove it.
 wp.domReady( () => {

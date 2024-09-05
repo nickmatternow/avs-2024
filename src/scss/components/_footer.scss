@@ -5,23 +5,102 @@
 .c-page-footer {
   padding-top: 100px;
 
+  .cell {
+    padding-right: 30px;
+    padding-left: 30px;
+    &:last-child {
+      padding-right: 0;
+    }
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+  .menu {
+    margin-top: 5px;
+    li {
+      a {
+        color: #fff;
+        font-weight: 700;
+        font-family: $font-secondary;
+        font-size: 18px;
+      }
+    }
+    .sub-menu {
+      margin-top: 40px;
+      li {
+        margin-bottom: 20px;
+        a {
+          font-weight: 400;
+          font-family: $font-primary;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+.c-footer-columns {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  .c-footer-column:first-of-type {
+    width: 30%;
+  }
+  .c-footer-column:nth-of-type(2) {
+    width: 20%;
+  }
+  .c-footer-column:nth-of-type(3) {
+    width: 20%;
+  }
+  .c-footer-column:last-of-type {
+    width: 30%;
+  }
+
+}
+
+.u-two-col-menu {
+  .sub-menu { 
+columns: 2;
+  }
 }
 
 .c-page-footer-upper {
-  background-color: $color-gray-light;
+  background-color: $color-black;
   padding-left: 25px;
   padding-right: 25px;
   padding-bottom: 100px;
+  color: #fff;
 }
 
 .c-page-footer-lower {
-  background-color: #333;
+  background-color: $color-black;
   color: #fff;
   padding-left: 25px;
   padding-right: 25px;
   font-size: 15px;
+  color: #fff;
+
   > div {
     padding-top: 5px;
     padding-bottom: 5px;
+    border-top: 1.5px solid #fff;
+    padding-top: 32px;
+    padding-bottom: 63px;
+    font-size: 14px;
+    text-align: center;
+    p {
+      font-size: 14px;
+    }
   }
+  a {
+    color: #fff;
+    margin-left: 36px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.c-copywrite {
+  margin-top: 33px;
 }

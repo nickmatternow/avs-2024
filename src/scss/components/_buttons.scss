@@ -25,3 +25,25 @@
 }
 
 
+.gb-button:not(.gb-accordion__toggle):active, .gb-button:not(.gb-accordion__toggle):focus {
+  outline: 1px solid #fff;
+  outline-offset: 6px;
+}
+
+.c-more-link {
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+  font-family: $font-secondary;
+  svg {
+    transition: $transition-ease;
+  }
+  &:hover {
+    color: #fff;
+    svg {
+      margin-left: 5px;
+    }
+  }
+}

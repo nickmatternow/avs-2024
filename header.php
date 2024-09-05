@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -13,12 +13,21 @@
   <?php // other html head stuff (before WP/theme scripts are loaded) ------- ?>
 
   <?php wp_head(); // wordpress head functions -- DONOTREMOVE ?>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
 
   <?php // START Google Analytics here ?>
   <?php // END Analytics ?>
 </head>
 
-<body <?php body_class(pretty_body_class()); ?> itemscope itemtype="https://schema.org/WebPage">
+<body <?php 
+    $classes = pretty_body_class();
+    if (get_field('is_dark_page')) {
+        $classes .= ' is-dark-page';
+    }
+    body_class($classes); 
+?> itemscope itemtype="https://schema.org/WebPage">
 
   <header id="c-page-header" class="o-section c-page-header" role="banner" itemscope itemtype="https://schema.org/WPHeader">
     <div class="o-wrapper-wide  u-relative">

@@ -25,6 +25,33 @@
 // });
 // headroom.init();
 
+document.addEventListener('DOMContentLoaded', function() {
+    const accordionItems = document.querySelectorAll('.c-accordion-item');
+    const accordionImage = document.getElementById('c-accordion-image');
+
+    accordionItems.forEach(item => {
+        item.querySelector('.c-accordion-header').addEventListener('click', function() {
+            // Close all accordion items
+            accordionItems.forEach(i => i.classList.remove('active'));
+            
+            // Open the clicked accordion item
+            item.classList.add('active');
+            
+            // Change the image in the right column with a crossfade effect
+            const imageSrc = item.getAttribute('data-image');
+            
+            // Add fade-out class to start the fade-out transition
+            accordionImage.classList.add('fade-out');
+            
+            // Wait for the fade-out transition to complete before changing the image
+            setTimeout(() => {
+                accordionImage.src = imageSrc;
+                // Remove fade-out class and trigger fade-in transition
+                accordionImage.classList.remove('fade-out');
+            }, 300); // Match the duration of the CSS transition
+        });
+    });
+});
 // *********************** END CUSTOM JS *********************************
 
 

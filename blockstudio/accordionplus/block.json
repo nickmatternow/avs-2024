@@ -1,0 +1,39 @@
+{
+    "$schema": "https://app.blockstudio.dev/schema",
+    "name": "blockstudio/accordionplus",
+    "title": "Accordion With Image",
+    "category": "myblocks",
+    "icon": "star-filled",
+    "description": "A custom post carousel block",
+    "script": "splide",
+    "blockstudio": {
+        "attributes": [
+            {
+                "id": "items",
+                "type": "repeater",
+                "label": "Accordion Items",
+                "textButton": "Add Accordion",
+                "attributes": [
+                  {
+                    "id": "title",
+                    "type": "text",
+                    "label": "Title",
+                    "placeholder": "Title"
+                  },
+                  {
+                    "id": "details",
+                    "type": "textarea",
+                    "label": "Details",
+                    "placeholder": "Enter details"
+                  },
+                  {
+                    "id": "accordionimage",
+                    "type": "files",
+                    "label": "Image",
+                    "placeholder": "Upload image"
+                  }
+                ]
+              }
+    ]
+    }
+  }

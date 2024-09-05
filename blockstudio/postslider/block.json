@@ -1,0 +1,10 @@
+{
+  "$schema": "https://app.blockstudio.dev/schema",
+  "name": "blockstudio/postcarousel",
+  "title": "Post Carousel",
+  "category": "myblocks",
+  "icon": "star-filled",
+  "description": "A custom post carousel block",
+  "script": "splide",
+  "blockstudio": true
+}

@@ -1,0 +1,8 @@
+{
+    "name": "blockstudio/wrapperblock",
+    "title": "Custom wrapper",
+    "category": "myblocks",
+    "icon": "star-filled",
+    "description": "Wrapper",
+    "blockstudio": true
+}

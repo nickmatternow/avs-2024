@@ -16,9 +16,74 @@
   width: 100%;
 }
 
+.o-wrapper-wider {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1222px;
+  width: 100%;
+}
+
 .o-wrapper-narrow {
   margin-left: auto;
   margin-right: auto;
   max-width: $wrapper-width-narrow;
   width: 100%;
+}
+
+.is-style-grad-bg-one {
+  position: relative; /* Ensure the pseudo-element is positioned relative to this element */
+  
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 45%;
+    width: 136px; /* Set the width of the gradient */
+    height: 136px; /* Set the height of the gradient */
+    background: radial-gradient(circle, rgba(251, 130, 39, 0.2) 0%, transparent 100%);
+    transform: translateY(-50%); /* Center the gradient vertically */
+    filter: blur(100px);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -220px;
+    top: 55%;
+    width: 336px; /* Set the width of the gradient */
+    height: 336px; /* Set the height of the gradient */
+    background: radial-gradient(circle, rgba(251, 130, 39, 0.25) 0%, transparent 100%);
+    transform: translateY(-50%); /* Center the gradient vertically */
+    filter: blur(100px);
+  }
+}
+
+.c-lower-cta-wrapper {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 65%;
+    top: 45%;
+    width: 400px; /* Set the width of the gradient */
+    height: 400px; /* Set the height of the gradient */
+    background: radial-gradient(circle, rgba(255, 35, 35, 0.2) 0%, transparent 100%);
+    transform: translateY(-50%); /* Center the gradient vertically */
+    filter: blur(100px);
+  }
+}
+
+.c-carousel-wrapper {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 60%;
+    top: 52%;
+    width: 214px; /* Set the width of the gradient */
+    height: 214px; /* Set the height of the gradient */
+    background: radial-gradient(circle, rgba(255, 35, 35, 0.5) 0%, transparent 100%);
+    transform: translateY(-50%); /* Center the gradient vertically */
+    filter: blur(100px);
+  }
 }

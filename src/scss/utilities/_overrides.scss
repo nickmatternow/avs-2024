@@ -3,3 +3,21 @@
    ========================================================================== */
 
 // ideally this file is forever blank. likely it won't be. :(
+.gb-tabs {
+   .gb-block-is-current {
+      position: relative;
+      &:before {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 47px;
+         height: 3px;
+         background-color: $color-pulse-orange;
+         z-index: 1;
+      }
+   }
+   .gb-button:focus, .gb-button:active {
+      outline: none !important;
+   }
+}

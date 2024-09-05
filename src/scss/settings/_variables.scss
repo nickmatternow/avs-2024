@@ -23,17 +23,24 @@ $page-header-height: 100px;
 
 
 // ++ COLOURS +++++++++++++++++++++++++++++++++
-$color-red:         #A82313;
- 
-$color-primary:       #460f5f; 
-$color-secondary:       #460f5f;
+$color-red:         #FF2323;
 
-$color-gray-light:        #EAEAEA;
-$color-gray-med:        #ACACAC;
-$color-gray-dark:        #323232;
+$color-pulse-orange:       #FF5B00; 
+$color-primary:       #FF5B00; 
 
-$color-black:           #000;
+
+
+$color-white-flash:  #eee;
+$color-gray-light:        #eee;
+
+$color-gray-med:        #2F2F2F;
+$color-secondary:       $color-gray-med;
+
+$color-gray-dark:        #2F2F2F;
+
+$color-black:           #1C1C1B;
 $color-white:           #FFF;
+
 
 // assign colours to variables
 $alert-color:       $color-red;
@@ -44,7 +51,7 @@ $border-color:      $color-gray-med;
 $heading-color:     $color-gray-dark;
 
 
-// ++ MISC VARS ++++++++++++++++++++++++++++++++++
+// ++ MISC VARS ++++++++++++++++++++++++++++++++++ 
 // Logo
 
 $logo-size: 300px;
@@ -53,8 +60,31 @@ $logo-size: 300px;
 
 // ++ TYPOGRAPHY +++++++++++++++++++++++++++++++++
 // Fonts
-$font-primary: 'rubik', sans-serif;
-$font-secondary: 'rubik', serif;
+
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 400 to 700
+
+.arimo-400 {
+   font-family: "Arimo", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 400;
+   font-style: normal;
+ }
+
+
+
+.cairo-400 {
+   font-family: "Cairo", system-ui;
+   font-optical-sizing: auto;
+   font-weight: 400;
+   font-style: normal;
+   font-variation-settings:
+     "slnt" 0;
+ }
+
+$font-primary: 'Arimo', sans-serif;
+$font-secondary: 'Cairo', serif;
 
 // Spacing
 $line-height-normal: 1.50;

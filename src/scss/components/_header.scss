@@ -13,4 +13,10 @@
   // top: 0;
   // width: 100%;
   // z-index: z(overlay);
+
+  .is-dark-page & {
+    background: $color-black;
+    color: #fff;
+  }
 }
+

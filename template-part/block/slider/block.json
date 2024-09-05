@@ -1,8 +1,8 @@
 {
     "name": "acf/slider-block",
     "title": "Slider",
-    "description": "Custom Slider",
-    "icon": "button",
+    "description": "Testimonial Slider",
+     "icon": "<div>:-)</div>",
     "viewScript": [ "splide", "slider" ],
     "keywords": ["slider"],
     "category": "myblocks",
